@@ -9,8 +9,6 @@ from django.http import JsonResponse
 '''
     I filtered data by vehicle because vehicle is index on NavigationRecord.
 '''
-
-
 def last_points(request):
     before_48hours = datetime.datetime.now() - datetime.timedelta(hours=48)
     vehicles = list(Vehicle.objects.values_list('id', flat=True))
