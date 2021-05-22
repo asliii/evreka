@@ -15,7 +15,7 @@ class NavigationRecord(models.Model):
     vehicle = models.ForeignKey(Vehicle, on_delete=models.CASCADE, verbose_name='Vehicle')
     latitude = models.FloatField(verbose_name='Latitude')
     longitude = models.FloatField(verbose_name='Longitude')
-    datetime = models.DateTimeField(verbose_name='Datetime', default=datetime.datetime.now())
+    datetime = models.DateTimeField(verbose_name='Datetime', auto_now_add=True)
 
     class Meta:
         indexes = [models.Index(fields=['vehicle', 'datetime'])]
