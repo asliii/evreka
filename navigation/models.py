@@ -25,7 +25,9 @@ class NavigationRecord(models.Model):
 
 
 '''
-    Should be update vehicle last location when vehicle send location. This table contains only one data per vehicle. May be use the redis is sense too.
+    If want to fetch vehicle last location at often, this data should save on database and should be update vehicle last location when vehicle send location. 
+    This table contains only one data per vehicle so filtering to location of last 48 hours or any time piece is very fast to directly proportional with vehicle count.
+     May be use the Redis is sense too. So i can suggest redis as tool, LastLocations model as model change. 
 '''
 '''
 
