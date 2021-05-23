@@ -7,7 +7,7 @@ from django.http import JsonResponse
 
 
 '''
-    I filtered data by vehicle because vehicle is index on NavigationRecord. Maybe try write raw sql in orm or only raw sql
+    I filtered data by vehicle because vehicle is index on NavigationRecord. Maybe try write raw sql in orm or only raw sql.
 '''
 def last_points(request):
     before_48hours = datetime.datetime.now() - datetime.timedelta(hours=48)
